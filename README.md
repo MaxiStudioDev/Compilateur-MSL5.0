@@ -1,7 +1,7 @@
 # Histoire du MSL5
 
 Si vous voulez savoir le début de cette histoire, la voici :
-[https://github.com/MaxiStudioDev/Cpu-32-Bits-Project-MSL5P/blob/main/README.md]
+[https://github.com/MaxiStudioDev/Cpu-32-Bits-Project-MSL5P/main/README.md]
 
 # Compilateur MSL5.0
 
