@@ -1,0 +1,47 @@
+{
+  "name": "msl5-mini-pro",
+  "displayName": "MSL5 Mini Pro v4.5",
+  "description": "Support complet pour le langage MSL5 Mini Pro v4.5 - Syntaxe Rust + Opcodes Textuels",
+  "version": "4.5.0",
+  "publisher": "msl5",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters"
+  ],
+  "activationEvents": [
+    "onLanguage:msl5"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "msl5",
+        "aliases": [
+          "MSL5 Mini Pro",
+          "msl5"
+        ],
+        "extensions": [
+          ".msl5"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "msl5",
+        "scopeName": "source.msl5",
+        "path": "./syntaxes/msl5.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "msl5",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}

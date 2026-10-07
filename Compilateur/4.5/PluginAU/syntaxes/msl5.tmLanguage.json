@@ -1,0 +1,124 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "MSL5 Mini Pro",
+  "scopeName": "source.msl5",
+  "fileTypes": [
+    "msl5"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords-control"
+    },
+    {
+      "include": "#keywords-opcodes"
+    },
+    {
+      "include": "#keywords-gpio-methods"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#brackets"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.msl5",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.line.hash.msl5",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.block.msl5",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "keywords-control": {
+      "patterns": [
+        {
+          "name": "keyword.control.msl5",
+          "match": "(?i)\\b(fn|main|if|while|loop|for|break|let|reg|in|out|true|false)\\b"
+        }
+      ]
+    },
+    "keywords-opcodes": {
+      "patterns": [
+        {
+          "name": "entity.name.function.msl5",
+          "match": "(?i)\\b(add|sub|or|and|xor|and1b|flag|latch|reset|jmp|nop|stop)\\b"
+        }
+      ]
+    },
+    "keywords-gpio-methods": {
+      "patterns": [
+        {
+          "name": "entity.name.function.msl5",
+          "match": "\\.(?i)(set|setmode|cutall)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.msl5",
+          "match": "\\b([0-9]+)\\b"
+        },
+        {
+          "name": "constant.numeric.hex.msl5",
+          "match": "\\b(0[xX][0-9a-fA-F]+)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.msl5",
+          "match": "(==|!=|<=|>=|<|>|\\+|\\-|\\*|/|%|&|\\||\\^|&&|\\|\\||!)"
+        },
+        {
+          "name": "punctuation.separator.msl5",
+          "match": "(,|;|\\.)"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.msl5",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.msl5",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "name": "punctuation.bracket.msl5",
+          "match": "[\\{\\}\\(\\)]"
+        }
+      ]
+    }
+  }
+}

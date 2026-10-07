@@ -1,0 +1,234 @@
+{
+  "Main Function": {
+    "prefix": "main",
+    "body": [
+      "fn main() {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Structure de base MSL5"
+  },
+  "While Loop ==": {
+    "prefix": "while",
+    "body": [
+      "while $1 == $2 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Boucle while avec condition d'égalité"
+  },
+  "While Loop >": {
+    "prefix": "whilegt",
+    "body": [
+      "while $1 > $2 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Boucle while avec condition supérieur"
+  },
+  "While Loop <": {
+    "prefix": "whilelt",
+    "body": [
+      "while $1 < $2 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Boucle while avec condition inférieur"
+  },
+  "If Condition ==": {
+    "prefix": "if",
+    "body": [
+      "if $1 == $2 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Condition if avec égalité"
+  },
+  "If Condition >": {
+    "prefix": "ifgt",
+    "body": [
+      "if $1 > $2 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Condition if avec supérieur"
+  },
+  "If Condition <": {
+    "prefix": "iflt",
+    "body": [
+      "if $1 < $2 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Condition if avec inférieur"
+  },
+  "If In() Condition": {
+    "prefix": "ifin",
+    "body": [
+      "if In($1) == $2 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Condition if sur pin GPIO"
+  },
+  "LOOP": {
+    "prefix": "loop",
+    "body": [
+      "loop $1 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Boucle répétée N fois"
+  },
+  "FOR Range": {
+    "prefix": "for",
+    "body": [
+      "for $1 in $2..$3 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Boucle FOR avec plage"
+  },
+  "FOR Count": {
+    "prefix": "forcnt",
+    "body": [
+      "for $1 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Boucle FOR avec nombre fixe"
+  },
+  "LET Variable": {
+    "prefix": "let",
+    "body": "let ${1:x} = $0",
+    "description": "Déclaration de variable simple"
+  },
+  "LET Expression": {
+    "prefix": "letexpr",
+    "body": "let ${1:x} = $2 ${3|+,-,|,&,^|} $4",
+    "description": "Déclaration de variable avec opération"
+  },
+  "REG READ": {
+    "prefix": "reg",
+    "body": "reg read $0",
+    "description": "Lecture de registre"
+  },
+  "In GPIO": {
+    "prefix": "in",
+    "body": "In(${1:1})$0",
+    "description": "Lecture pin GPIO"
+  },
+  "Out GPIO": {
+    "prefix": "out",
+    "body": "Out(${1:1})$0",
+    "description": "Sortie GPIO (impulsion)"
+  },
+  "Out GPIO with Set": {
+    "prefix": "outset",
+    "body": "Out(${1:1}).Set(${2:0})$0",
+    "description": "Sortie GPIO avec Set"
+  },
+  "Out GPIO Set Mode": {
+    "prefix": "outmode",
+    "body": "Out(${1:1}).Set(${2:0}).SetMode(${3:2})$0",
+    "description": "Sortie GPIO complète avec mode"
+  },
+  "Out CutAll": {
+    "prefix": "cutall",
+    "body": "Out(0).CutAll()$0",
+    "description": "Couper toutes les sorties GPIO"
+  },
+  "ADD Opcode": {
+    "prefix": "add",
+    "body": "ADD $1, $2$0",
+    "description": "Addition - ADD d1, d2"
+  },
+  "SUB Opcode": {
+    "prefix": "sub",
+    "body": "SUB $1, $2$0",
+    "description": "Soustraction - SUB d1, d2"
+  },
+  "OR Opcode": {
+    "prefix": "or",
+    "body": "OR $1, $2$0",
+    "description": "OU logique - OR d1, d2"
+  },
+  "AND Opcode": {
+    "prefix": "and",
+    "body": "AND $1, $2$0",
+    "description": "ET logique - AND d1, d2"
+  },
+  "XOR Opcode": {
+    "prefix": "xor",
+    "body": "XOR $1, $2$0",
+    "description": "OU exclusif - XOR d1, d2"
+  },
+  "AND1B Opcode": {
+    "prefix": "and1b",
+    "body": "AND1B $1, $2$0",
+    "description": "ET sur 1 bit - AND1B d1, d2"
+  },
+  "FLAG Opcode": {
+    "prefix": "flag",
+    "body": "FLAG$0",
+    "description": "Définir flag"
+  },
+  "LATCH Opcode": {
+    "prefix": "latch",
+    "body": "LATCH$0",
+    "description": "Verrouiller registre"
+  },
+  "RESET Opcode": {
+    "prefix": "reset",
+    "body": "RESET$0",
+    "description": "Déverrouiller registre"
+  },
+  "JMP Opcode": {
+    "prefix": "jmp",
+    "body": "JMP $1$0",
+    "description": "Saut - JMP adresse"
+  },
+  "NOP Opcode": {
+    "prefix": "nop",
+    "body": "NOP$0",
+    "description": "Pas d'opération"
+  },
+  "STOP Opcode": {
+    "prefix": "stop",
+    "body": "STOP$0",
+    "description": "Arrêt du programme"
+  },
+  "BREAK": {
+    "prefix": "break",
+    "body": "BREAK$0",
+    "description": "Sortir de boucle"
+  },
+  "Complete Loop Program": {
+    "prefix": "complete",
+    "body": [
+      "fn main() {",
+      "\twhile 1 == 1 {",
+      "\t\t$1",
+      "\t\tBREAK",
+      "\t}",
+      "\tSTOP",
+      "}"
+    ],
+    "description": "Programme complet avec boucle"
+  },
+  "Complete GPIO Program": {
+    "prefix": "completeio",
+    "body": [
+      "fn main() {",
+      "\tloop 10 {",
+      "\t\tif In(1) == true {",
+      "\t\t\tOut(2).Set(1)",
+      "\t\t}",
+      "\t}",
+      "\tOut(0).CutAll()",
+      "\tSTOP",
+      "}"
+    ],
+    "description": "Programme complet avec GPIO"
+  }
+}
