@@ -47,9 +47,27 @@ Compilateur-MSL5.0/
 └── ...
 ```
 
+## ⚠️ IMPORTANT - Emplacement obligatoire du dossier Compilateur
+
+**Le dossier `Compilateur` DOIT être obligatoirement situé dans le dossier `Documents` de votre ordinateur.**
+
+**Chemin requis :** `C:\Users\[VotreNomUtilisateur]\Documents\Compilateur\`
+
+**Pourquoi ?** L'émulateur CPU 32-Bits (Cpu-32-Bits-Project-MSL5P) recherche les fichiers à cet emplacement exact. Si vous le placez ailleurs, l'émulateur ne trouvera pas les fichiers `OpC`, `D1`, `D2` et cessera de fonctionner.
+
+### Étapes d'installation
+
+1. **Clonez ou téléchargez** ce repository
+2. **Copiez le dossier `Compilateur`** complet depuis ce repository
+3. **Collez-le dans votre dossier Documents** (`C:\Users\[VotreNomUtilisateur]\Documents\`)
+4. **Vérifiez que l'arborescence est intacte** :
+   - `Documents/Compilateur/4.5/compilator/` ✅
+   - `Documents/Compilateur/4.5/Simulator/` ✅
+   - `Documents/Compilateur/4.5/PluginAU/` ✅
+
 ## ⚠️ IMPORTANT - Structure du dossier Compilateur
 
-**Le dossier `Compilateur` et toute son arborescence DOIVENT rester intacts dans le repository.**
+**Le dossier `Compilateur` et toute son arborescence DOIVENT rester intacts.**
 
 **Ne pas modifier, déplacer ou supprimer :**
 - ✅ La structure complète du dossier `Compilateur/4.5/`
@@ -58,7 +76,7 @@ Compilateur-MSL5.0/
 
 **Pourquoi ?** L'émulateur CPU 32-Bits (Cpu-32-Bits-Project-MSL5P) dépend de ces fichiers aux emplacements spécifiques. Si vous modifiez l'arborescence ou déplacez les fichiers, l'émulateur ne pourra pas les localiser et cessera de fonctionner correctement.
 
-**Recommandation** : Copiez le compilateur Rust vers votre projet, mais ne touchez pas à la structure originale du dépôt.
+**Recommandation** : Une fois le dossier correctement placé dans Documents, ne le touchez plus. Copiez les fichiers dont vous avez besoin dans d'autres projets, mais préservez l'intégrité du dossier `Compilateur/` dans Documents.
 
 ## Prérequis
 
@@ -69,7 +87,7 @@ Compilateur-MSL5.0/
 
 ## Compilation du compilateur
 
-Depuis le dossier `Compilateur/4.5/compilator` :
+Depuis le dossier `Documents/Compilateur/4.5/compilator` :
 
 ```bash
 cargo build
@@ -113,7 +131,7 @@ Le langage supporte un style de programmation proche des instructions logiques t
 Le simulateur se trouve dans :
 
 ```text
-Compilateur/4.5/Simulator
+Documents/Compilateur/4.5/Simulator
 ```
 
 Il est conçu pour une utilisation sous Windows et sert à tester les programmes MSL5.0 dans une interface graphique.
@@ -123,7 +141,7 @@ Il est conçu pour une utilisation sous Windows et sert à tester les programmes
 L'extension est située dans :
 
 ```text
-Compilateur/4.5/PluginAU
+Documents/Compilateur/4.5/PluginAU
 ```
 
 Elle apporte :
@@ -135,7 +153,7 @@ Elle apporte :
 Pour installer l'extension locale :
 
 ```bash
-code --install-extension msl5-mini-pro-4.5.0.vsix
+code --install-extension Documents/Compilateur/4.5/msl5-mini-pro-4.5.0.vsix
 ```
 
 ## Développement
