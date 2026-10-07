@@ -1,7 +1,11 @@
 # Histoire du MSL5
 
 Si vous voulez savoir le début de cette histoire, la voici :
+Version Amelliorer :
+[https://maxistudiodev.github.io/Cpu-32-Bits-Project-MSL5P]
+version classique:
 [https://github.com/MaxiStudioDev/Cpu-32-Bits-Project-MSL5P]
+
 
 # Compilateur MSL5.0
 
